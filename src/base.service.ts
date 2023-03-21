@@ -4,9 +4,9 @@ import {
   FindOptionsWhere,
   Repository,
 } from 'typeorm';
+import { Deserialize, PaginatedDeserialize } from './decorator';
 import { IBaseService } from './interface.base.service';
 import { Deserializer } from './types';
-import { Deserialize, PaginatedDeserialize } from './decorator';
 
 export class BaseService<
   T extends { id: number | string },

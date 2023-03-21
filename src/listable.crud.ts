@@ -6,9 +6,9 @@ import {
   Query,
   Req,
 } from '@nestjs/common';
-import { Constructor } from './types';
-import { BaseController } from './base.controller';
 import { Request } from 'express';
+import { BaseController } from './base.controller';
+import { Constructor } from './types';
 
 export function Listable<TBase extends Constructor<BaseController>>(
   Base: TBase,
@@ -31,7 +31,7 @@ export function Listable<TBase extends Constructor<BaseController>>(
         {},
         +page,
         +limit,
-        `${req.protocol}://localhost:8000/auth${req.originalUrl}`,
+        `${req.get('host')}`,
       );
     }
   }

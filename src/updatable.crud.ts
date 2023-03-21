@@ -6,9 +6,9 @@ import {
   Type,
   UsePipes,
 } from '@nestjs/common';
-import { Constructor } from './types';
-import { BaseController } from './base.controller';
 import { AbstractValidationPipe } from './abstract.validation.pipe';
+import { BaseController } from './base.controller';
+import { Constructor } from './types';
 
 export function Updatable<TBase extends Constructor<BaseController>, T>(
   Base: TBase,

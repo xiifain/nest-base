@@ -1,6 +1,6 @@
 import { Delete, Param, ParseIntPipe, Post } from '@nestjs/common';
-import { Constructor } from './types';
 import { BaseController } from './base.controller';
+import { Constructor } from './types';
 
 export function SoftDeleteRestorable<TBase extends Constructor<BaseController>>(
   Base: TBase,
